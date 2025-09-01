@@ -29,5 +29,32 @@ if (userChoice === "Pizza") {
 // Step 4 - Age
 // Your code goes here
 
+let age;
+let isValidAge = false;
+
+while (!isValidAge) {
+  let input = prompt("Awesome! Now, how old are you?");
+  let parsedAge = Number(input); // Convert the input string to a number
+
+  // Check if the input is a valid number and not negative
+  if (isNaN(parsedAge) || parsedAge < 0) {
+    alert("That's not a valid age. Please enter a positive number (e.g., 7).");
+  } else {
+    age = parsedAge;
+    isValidAge = true; // Exit the loop as we have a valid age
+  }
+}
+
+if (age <= 7) {
+  alert("Hey, you are too young");
+} else {
+  alert("Nice!")
+
+}
+
+
 // Step 5 - Order confirmation
-// Your code goes here
+
+alert(
+  `Just to confirm, your age is ${age}, and you prefer to eat ${userSubChoice} ${userChoice}, right?.`
+)
